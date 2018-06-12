@@ -19,21 +19,44 @@ Page({
         iscollect: is_select,
         
         productArray: [
-          {
-            "itemUrl": '../../image/index/ppx.jpg',
-            "itemText": '多肉植物-碰碰香',
-            'address': '如皋',
-            'amnt': '210',
-            'dz_amnt':'100',
-            'item_sm_Text': ' *本产品由 xx品牌商 提供发货服务。'
-          }
+         
         ]
     },
     onLoad: function (option) {
+      var that = this;
       console.log(option.id);
       product_id = option.id;
       this.setData({
         iscollect: wx.getStorageSync('product_id_' + product_id)
+      })
+
+      //初始化 猜你喜欢  
+      wx.request({
+        url: "http://op.juhe.cn/onebox/exchange/currency?key=我的appkey&from=CNY&to=" + 'USD',
+        // data: null,
+        header: {
+          "Content-Type": "application/json"
+        },
+        success: function (res) {
+
+          console.log(res);
+          that.setData({
+            productArray: [
+              {
+                "itemUrl": '../../image/index/ppx.jpg',
+                "itemText": '多肉植物-碰碰香',
+                'address': '如皋',
+                'amnt': '210',
+                'dz_amnt': '100',
+                'item_sm_Text': ' *本产品由 xx品牌商 提供发货服务。'
+              }
+            ]
+          })
+        },
+        fail: function (err) {
+          console.log(err)
+        }
+
       })
     },
     collect: function(e){

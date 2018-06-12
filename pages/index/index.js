@@ -1,8 +1,8 @@
 var WxAutoImage = require('../../js/wxAutoImageCal.js');
 var app = getApp();
-
 Page({
     data: {
+       
         imgUrls: [
             '../../image/swiper1.jpg',
             '../../image/swiper1.jpg',
@@ -47,32 +47,44 @@ Page({
               "iconText": '水培植物'
             }
         ],
-        itemArray: [
-            {
-                "itemUrl": '../../image/index/ppx.jpg',
-                "itemText": '多肉植物-碰碰香'
-            },
-            {
-                "itemUrl": '../../image/huaju.jpeg',
-                "itemText": '11月20日话剧《原野》'
-            },
-            {
-                "itemUrl": '../../image/huaju.jpeg',
-                "itemText": '11月28日“夜店”演唱会'
-            },
-        ],
-        likeArray: [
-          {
-            "itemUrl": '../../image/index/ppx.jpg',
-            "itemText": '多肉植物-碰碰香',
-            'address':'如皋',
-            'amnt':'100',
-            'linkUrl':'../spdetail/spdetail?id=1'
-          }
-        ]
+        
+        likeArray: []
     },
     cusImageLoad: function(e){
         var that = this;
         that.setData(WxAutoImage.wxAutoImageCal(e));
-    }
+    },
+    onLoad: function (options) {
+      var that = this;
+      //初始化 猜你喜欢  
+      wx.request({
+        url: "http://op.juhe.cn/onebox/exchange/currency?key=我的appkey&from=CNY&to=" + 'USD',
+        // data: null,
+        header: {
+           "Content-Type":"application/json"
+        },
+        success: function (res) {
+          
+          console.log(res);
+          that.setData({
+            likeArray: [
+              {
+                "itemUrl": '../../image/index/ppx.jpg',
+                "itemText": '多肉植物-碰碰香',
+                'address': '如皋',
+                'amnt': '100',
+                'linkUrl': '../spdetail/spdetail?id=1'
+              }
+            ]
+          })
+        },
+        fail: function (err) {
+          console.log(err)
+        }
+       
+      })
+
+
+     
+    }  
 })
