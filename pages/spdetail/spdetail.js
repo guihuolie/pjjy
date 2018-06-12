@@ -23,7 +23,7 @@ Page({
             "itemUrl": '../../image/index/ppx.jpg',
             "itemText": '多肉植物-碰碰香',
             'address': '如皋',
-            'amnt': '200',
+            'amnt': '210',
             'dz_amnt':'100',
             'item_sm_Text': ' *本产品由 xx品牌商 提供发货服务。'
           }
