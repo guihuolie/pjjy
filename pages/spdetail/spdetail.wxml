@@ -26,17 +26,19 @@
   <view class="goods_price">
     <text>¥{{item.dz_amnt}}</text>
     <text class="goods_old_price">¥{{item.amnt}}</text>
+    <text class='ku_cun'> 库存:{{item.ku_count}}件</text>
   </view>
   <view class="goods_deliver">
      {{item.item_sm_Text}}
   </view>
+
 </view>
 <view class="goods_infor_pre">
   <view class="goods_infor_txt">
-    <view class="goods_infor_brand">
+    <view class="goods_infor_brand" style="background-image: url('https://jsnt2018.com/examples/pjjy/index/ppx.jpg')">
 
     </view>
-    <text>蜜蜂从植物的花中采取含水量约为75%的花蜜或分泌物，存入自己第二个胃中，在体内多种转化的作用下，经过15天左右反复酝酿各种维生素、矿物质和氨基酸丰富到一定的数值时，同时把花蜜中的多糖转变成人体可直接吸收的单糖葡萄糖、果糖，水分含量少于23%存贮到巢洞中，用蜂蜡密封。</text>
+    <text>{{item.product_sm_Text}}</text>
   </view>
 </view>
 <view class="goods_infor_raw">
@@ -83,9 +85,8 @@
         <span>0</span>
       </view>
     </view>
-    <view class="goods_half_half red">前往首页</view>
-    <view class="goods_half_half blue">加入购物车</view>
-    <view class="goods_half_half green">前往付款</view>
+    <view class="goods_half_half blue" bindtap="add_to_cart">加入购物车</view>
+    <view class="goods_half_half red">立即购买</view>
   </view>
 </view>
 </view>

@@ -4,9 +4,7 @@ Page({
     data: {
        
         imgUrls: [
-            '../../image/swiper1.jpg',
-            '../../image/swiper1.jpg',
-            '../../image/swiper1.jpg'
+           
         ],
         indicatorDots: true,
         vertical: false,
@@ -74,6 +72,13 @@ Page({
                 'address': '如皋',
                 'amnt': '100',
                 'linkUrl': '../spdetail/spdetail?id=1'
+              },
+              {
+                "itemUrl": '../../image/index/ppx.jpg',
+                "itemText": '多肉植物-碰碰香',
+                'address': '如皋',
+                'amnt': '100',
+                'linkUrl': '../spdetail/spdetail?id=2'
               }
             ]
           })
@@ -82,6 +87,28 @@ Page({
           console.log(err)
         }
        
+      })
+
+      wx.request({
+        url: "http://op.juhe.cn/onebox/exchange/currency?key=我的appkey&from=CNY&to=" + 'USD',
+        header: {
+          "Content-Type": "application/json"
+        },
+        success: function (res) {
+
+          console.log(res);
+          that.setData({
+            imgUrls: [
+              '../../image/swiper1.jpg',
+              '../../image/index/ppx.jpg',
+              '../../image/swiper1.jpg'
+            ]
+          })
+        },
+        fail: function (err) {
+          console.log(err)
+        }
+
       })
 
 

@@ -67,7 +67,7 @@ swiper {
   position: absolute;
   width: 40px;
   height: 40px;
-  /* background-image: url(https://jsnt2018.com/examples/pjjy/brand.png); */
+  /* background-image: url(https://jsnt2018.com/examples/pjjy/brand.png);  */
   background-size: 40px 40px;
   background-repeat: no-repeat;
   background-position: center;
@@ -109,12 +109,12 @@ swiper {
   border-top: 1px solid #E5E5E5;
 }
 .goods_one {
-  width: 25%;
+  width: 26%;
   float: left;
   height: 50px;
 }
 .goods_half_half {
-  width: 25%;
+  width: 37%;
   float: left;
   height: 50px;
   font-size: 12px;
@@ -154,4 +154,9 @@ swiper {
   color: #FFF;
   text-align: center;
   line-height: 14px;
+}
+.ku_cun{
+  margin-left: 20px;
+  font-size: 16px;
+  color: #535353;
 }
