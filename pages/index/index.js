@@ -53,6 +53,7 @@ Page({
         that.setData(WxAutoImage.wxAutoImageCal(e));
     },
     onLoad: function (options) {
+
       var that = this;
       //初始化 猜你喜欢  
       wx.request({
