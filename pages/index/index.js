@@ -53,7 +53,7 @@ Page({
         that.setData(WxAutoImage.wxAutoImageCal(e));
     },
     onLoad: function (options) {
-
+      wx.showNavigationBarLoading();
       var that = this;
       //初始化 猜你喜欢  
       wx.request({
@@ -63,7 +63,7 @@ Page({
            "Content-Type":"application/json"
         },
         success: function (res) {
-          
+          wx.hideNavigationBarLoading();
           console.log(res);
           that.setData({
             likeArray: [
@@ -85,6 +85,7 @@ Page({
           })
         },
         fail: function (err) {
+          wx.hideNavigationBarLoading();
           console.log(err)
         }
        
@@ -96,7 +97,7 @@ Page({
           "Content-Type": "application/json"
         },
         success: function (res) {
-
+          wx.hideNavigationBarLoading()
           console.log(res);
           that.setData({
             imgUrls: [
@@ -107,6 +108,7 @@ Page({
           })
         },
         fail: function (err) {
+          wx.hideNavigationBarLoading()
           console.log(err)
         }
 

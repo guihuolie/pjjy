@@ -43,32 +43,31 @@
 </view>
 <view class="goods_infor_raw">
   <view class="goods_infor_item">
-    <text>【品 牌】</text>蜂之堂
+    <text>【植物品种】</text>碰碰香
   </view>
   <view class="goods_infor_item">
-    <text>【产 地】</text>湖南长沙
+    <text>【使用空间】</text>阳台、办公桌、窗台、卫生间、客厅、楼顶、庭院等
   </view>
   <view class="goods_infor_item">
-    <text>【净 含 量】</text>300g/罐
+    <text>【高度】</text>25cm-30cm
   </view>
   <view class="goods_infor_item">
-    <text>【保 质 期】</text>12月
+    <text>【功能】</text>吸甲醛、防辐射、净化空气、提神、驱蚊、美观、趣味等
   </view>
   <view class="goods_infor_item">
-    <text>【生产日期】</text>2016/11/23
+    <text>【适应季节】</text>春季、夏季
   </view>
   <view class="goods_infor_item">
-    <text>【储蓄方法】</text>低温避光存储
+    <text>【植物类别】</text>草本
   </view>
   <view class="goods_infor_item">
-    <text>【适用人群】</text>老少皆宜
+    <text>【难易程度】</text>非常容易
   </view>
   <view class="goods_infor_item">
-    <text>【食用方法】</text>直接食用或兑水
+    <text>【是否含花盆】</text>含花盆
   </view>
-  <view class="goods_infor_item">
-    <text>【温馨提示】</text>请使用60度一下温水
-  </view>
+
+
 </view>
 <!-- <view class="goods_detail">
   <view class="goods_detail_title">商品详情</view>
@@ -76,6 +75,11 @@
     <image bindload="cusImageLoad" src="../../image/IMG_0466.jpg" style="width:{{imageWidth}};height:{{imageHeight}}"></image>
   </view>
 </view> -->
+
+ <view class="section tc">
+ <view class="video_title">产品演示</view>
+  <video src="http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400"   controls ></video>
+</view> 
 <view class="goods_bottom"></view>
 <view class="goods_bottom_btn">
   <view>
